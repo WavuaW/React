@@ -1,12 +1,31 @@
+import { func } from "prop-types"
+import { useState } from "react"
 import "./styles.css"
 
 export default function App() {
+  const [newItem, setNewItem] = useState(" ")
+  const [todos, setTodos] = useState([])
+
+  function handleSubmit(e) {
+    e.preventDefault()
+
+    setTodos( (currentTodos) => {
+      return [
+        ...currentTodos, { id: crypto.randomUUID(), title: newItem, completed: false }]
+    })
+  }
+
   return(
   <>
-    <form className="new-item-form">
-      <div className="New Item">
+    <form onSubmit={handler} className="new-item-form">
+      <div className="form-row">
         <label htmlFor="item">New Item</label>
-        <input type='text' id="item"/>
+        <input 
+          value={newItem} 
+          onChange={e => setNewItem(e.target.value)} 
+          type='text' 
+          id="item"
+        />
       </div>
       <button className="btn">Add</button>
     </form>
@@ -15,6 +34,7 @@ export default function App() {
       <li>
         <label>
           <input type='checkbox'/>
+          Item 1
         </label>
         <button className="btn btn-danger">Delete</button>
       </li>
