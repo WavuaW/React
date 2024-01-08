@@ -1,5 +1,24 @@
 import "./styles.css"
 
 export default function App() {
-  return "Hi"
+  return(
+  <>
+    <form className="new-item-form">
+      <div className="New Item">
+        <label htmlFor="item">New Item</label>
+        <input type='text' id="item"/>
+      </div>
+      <button className="btn">Add</button>
+    </form>
+    <h1 className="header">To Do List</h1>
+    <ul className="list">
+      <li>
+        <label>
+          <input type='checkbox'/>
+        </label>
+        <button className="btn btn-danger">Delete</button>
+      </li>
+    </ul>
+  </>
+  )
 }
