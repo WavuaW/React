@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React from "react"
 import "./styles.css"
 
 export default function App() {
@@ -31,14 +31,14 @@ export default function App() {
     <h1 className="header">To Do List</h1>
     <ul className="list">
       {todos.map(todo => {
-        return (
-        <li>
-          <label>
-            <input type='checkbox' checked={todo.completed}/>
-            {todo.title}
-          </label>
-          <button className="btn btn-danger">Delete</button>
-        </li> 
+        return (        
+      <li>
+        <label>
+          <input type='checkbox' checked={todo.completed}/>
+          {todo.title}
+        </label>
+        <button className="btn btn-danger">Delete</button>
+      </li> 
         )
       })}
     </ul>
