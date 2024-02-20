@@ -1,6 +1,7 @@
 // App.js
 import React from 'react';
 import UserList from './UserList';
+import './App.css';
 
 const App = () => {
   // Assuming you have a list of users
@@ -12,7 +13,7 @@ const App = () => {
 
   return (
     <div>
-      <h1 style>Welcome to Safu CRM</h1>
+      <h1 style={{textAlign: 'center', color: 'white'}}>Welcome to Safu CRM</h1>
       <UserList users={users} />
     </div>
   );

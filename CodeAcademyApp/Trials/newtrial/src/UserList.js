@@ -5,7 +5,7 @@ import './UserList.css'; // Import the CSS file
 const UserList = ({ users }) => {
   return (
     <div className="user-list-container">
-      <h2>User List</h2>
+      <h2>Customers</h2>
       <table className="user-table">
         <thead>
           <tr>
