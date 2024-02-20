@@ -8,7 +8,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #FE828C
+  ;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,7 +25,7 @@ button {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  background-color: #61dafb;
+  background-color: #800000;
   color: white;
   border-radius: 5px;
 }
