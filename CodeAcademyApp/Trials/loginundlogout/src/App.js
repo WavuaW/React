@@ -15,27 +15,7 @@ const App = () => {
   };
 
   return (
-    <Router>
-      <div>
-        <Route exact path="/">
-          {loggedInUser ? (
-            <Redirect to="/dashboard" />
-          ) : (
-            <Login onLogin={handleLogin} />
-          )}
-        </Route>
-        <Route path="/dashboard">
-          {loggedInUser ? (
-            <div>
-              <h2>Welcome, {loggedInUser}!</h2>
-              <Logout onLogout={handleLogout} />
-            </div>
-          ) : (
-            <Redirect to="/" />
-          )}
-        </Route>
-      </div>
-    </Router>
+    
   );
 };
 
